@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Canlig Liang Online Order</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+    <!-- PyScript CSS -->
+    <link rel="stylesheet" href="https://pyscript.net/releases/2025.7.3/core.css">
+
+    <!-- PyScript JS -->
+    <script type="module" src="https://pyscript.net/releases/2025.7.3/core.js"></script>
+
+    <style>
+        body {
+            background-color: #EC9A29;
+            font-family: sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .container1 {
+            background-color: #2F4858;
+            padding: 20px;
+            border-radius: 9px;
+            color: #EDE9EC;
+            width: 650px;
+            margin: 20px auto;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-flex {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin: 0 auto;
+            max-width: 800px;
+        }
+        .container2, .container3 {
+            width: 360px;
+            flex: 1 1 360px;
+            padding: 20px;
+            border-radius: 9px;
+            border: medium solid #EDE9EC;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .container3 h3 {
+            margin-bottom: 10px;
+        }
+        .container2 {
+            background-color: #A8201A;
+            color: #ffffff;
+        }
+        .container3 {
+            background-color: #023379;
+            color: white;
+        }
+        input[type="text"], input[type="number"] {
+            width: 100%;
+            height: 30px;
+            border-radius: 9px;
+            border: 1px solid white;
+            box-sizing: border-box;
+        }
+        button {
+            width: 100%;
+            height: 50px;
+            border-radius: 9px;
+            border: 1px solid white;
+            cursor: pointer;
+            background-color: #ffffff;
+            color: #A8201A;
+            font-weight: bold;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        td input[type="number"] {
+            width: 60px;
+            height: 25px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .navbar {
+            background-color: #2F4858;
+            color: #EDE9EC;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            font-size: 18px;
+        }
+        .navbar .brand {
+            font-weight: bold;
+            font-size: 22px;
+        }
+        .navbar .nav-links a {
+            color: #EDE9EC;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: 500;
+        }
+        .navbar .nav-links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="brand">Canlig Liang</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="ordering.html">Orders</a>
+            <a href="contact.html">Contacts</a>
+        </div>
+    </nav>
+
+    <div class="container1">
+        <h1>Canlig Liang | Online Order Form</h1>
+        <h3>Owned by John Alfred F. Taruc Jr.</h3>
+        <h3>Established 2024</h3>
+    </div>
+
+    <br>
+
+    <div class="form-flex">
+        <div class="container2">
+            <h3>Food Online Order System</h3>
+            <h4>Customer Information</h4>
+            <input id="fname" type="text" placeholder="First Name">
+            <input id="lname" type="text" placeholder="Last Name">
+            <input id="contactnum" type="number" placeholder="Contact Number">
+            <input id="address" type="text" placeholder="Address">
+            <p>Please select your orders first before confirming your information, thank you!</p>
+            <button py-click="confirm_info">Confirm Customer Information</button>
+            <div id="result"></div>
+            <div id="status"></div>
+        </div>
+
+        <div class="container3">
+            <h3>Menu</h3>
+            <table>
+                <tr>
+                    <th>Item</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" id="pinikpikan_check">Pinikpikan</td>
+                    <td>₱100</td>
+                    <td><input id="pinikpikan_qty" type="number" min="0" max="10" value="0"></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" id="etag_check">Etag</td>
+                    <td>₱150</td>
+                    <td><input id="etag_qty" type="number" min="0" max="10" value="0"></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" id="patupat_check">Patupat</td>
+                    <td>₱50</td>
+                    <td><input id="patupat_qty" type="number" min="0" max="10" value="0"></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" id="rice_check">Rice</td>
+                    <td>₱99</td>
+                    <td><input id="rice_qty" type="number" min="0" max="10" value="0"></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" id="sic_check">Soda In Can</td>
+                    <td>₱75</td>
+                    <td><input id="sic_qty" type="number" min="0" max="10" value="0"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <py-script src="ordering.py"></py-script>
+</body>
+</html>

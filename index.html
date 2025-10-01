@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Canlig Liang Online Order</title>
+
+    <!-- Recommended meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+    <!-- PyScript CSS -->
+    <link rel="stylesheet" href="https://pyscript.net/releases/2025.7.3/core.css">
+
+    <!-- This script tag bootstraps PyScript -->
+    <script type="module" src="https://pyscript.net/releases/2025.7.3/core.js"></script>
+<style>
+    body{
+        background-color: #EC9A29;
+        font-family: sans-serif;
+        text-align: center;
+    }
+    .container1{
+        background-color: #2F4858;
+        padding: 15px;
+        border-radius: 9px;
+        color: #EDE9EC;
+        width: 650px;
+        margin: 20px auto;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .container2{
+        background-color: #A8201A;
+        width: 500px;
+        padding: 15px;
+        border-radius: 9px;
+        margin: 20px auto;
+        color: white;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        background-color: white;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+    th, td {
+        border: 1px solid #ddd;
+        padding: 12px;
+        text-align: center;
+    }
+    th {
+        background-color: #2F4858;
+        color: #fff;
+    }
+    td{
+        color: #000;
+    }
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+    tr:hover {
+        background-color: #ddd;
+    }
+    .business-hours {
+        margin-top: 15px;
+        font-weight: bold;
+        color: #fff;
+    }
+</style>
+</head>
+<body>
+    <div class="container1">
+        <h1>Canlig Liang | Online Order Form</h1>
+        <h3>Owned by John Alfred F. Taruc Jr.</h3>
+        <h3>Established 2024</h3>
+    </div>
+
+    <div class="container2">
+        <h2>Menu</h2>
+        <table>
+            <tr>
+                <th>Item</th>
+                <th>Price</th>
+            </tr>
+            <tr>
+                <td>Pinikpikan</td>
+                <td>₱100</td>
+            </tr> 
+            <tr>
+                <td>Etag</td>
+                <td>₱150</td>
+            </tr>
+            <tr>
+                <td>Patupat</td>
+                <td>₱50</td>
+            </tr>
+            <tr>
+                <td>Rice</td>
+                <td>₱99</td>
+            </tr>
+            <tr>
+                <td>Soda In Can</td>
+                <td>₱75</td>
+            </tr>
+        </table>
+        <p class="business-hours">🕒 Business Hours: 6:00 AM – 12:00 MN</p>
+    </div>
+
+    <py-script src="main.py"></py-script>
+</body>
+</html>
