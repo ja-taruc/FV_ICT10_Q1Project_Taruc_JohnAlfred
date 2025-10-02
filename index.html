@@ -65,9 +65,40 @@
         font-weight: bold;
         color: #fff;
     }
+    .navbar {
+            background-color: #2F4858;
+            color: #EDE9EC;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            font-size: 18px;
+        }
+        .navbar .brand {
+            font-weight: bold;
+            font-size: 22px;
+        }
+        .navbar .nav-links a {
+            color: #EDE9EC;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: 500;
+        }
+        .navbar .nav-links a:hover {
+            text-decoration: underline;
+        }
 </style>
 </head>
 <body>
+     <nav class="navbar">
+        <div class="brand">Canlig Liang</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="ordering.html">Orders</a>
+            <a href="contact.html">Contacts</a>
+        </div>
+    </nav>
+    
     <div class="container1">
         <h1>Canlig Liang | Online Order Form</h1>
         <h3>Owned by John Alfred F. Taruc Jr.</h3>
@@ -107,4 +138,5 @@
 
     <py-script src="main.py"></py-script>
 </body>
+
 </html>
